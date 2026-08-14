@@ -1,6 +1,7 @@
 
 import data from "../testData/data.json"
 import GeneralUtilities from "../utility/GenerealUtility"
+import { expect } from "@playwright/test"
 
 export default class UserRegistration{
 
@@ -16,6 +17,11 @@ constructor(page){
     this.password=page.locator("//input[@id='Password']")
     this.confirmPass=page.locator("//input[@id='ConfirmPassword']")
     this.registerBTN=page.locator("//input[@id='register-button']")
+
+    this.registrationSuccessMessage=page.locator("//div[@class='result']")
+    this.logout=page.locator("[class='ico-logout']")
+
+   
     
 }
 
@@ -34,9 +40,8 @@ async EnterLastName(){
     await this.generalUtility.FillTheTextBox(this.lastName,data.userData.lastname)
 }
 
-async EnterEmail(){
-
-    await this.generalUtility.FillTheTextBox(this.email,data.userData.email)
+async EnterEmail(email) {
+    await this.generalUtility.FillTheTextBox(this.email, email);
 }
 
 async EnterPassword(){
@@ -52,6 +57,13 @@ async clickOnRegisterBtn(){
     await this.generalUtility.clickOnElement(this.registerBTN)
 }
 
+async verifyRegistrationSuccesful(){
 
+    await expect(this.registrationSuccessMessage).toHaveText("Your registration completed")
+}
 
+async logot(){
+
+    await this.generalUtility.clickOnElement(this.logout)
+}
 }

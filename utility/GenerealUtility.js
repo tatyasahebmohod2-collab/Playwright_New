@@ -29,7 +29,9 @@ async hover(element){
     await element.hover()
 }
 
-
+async selectOptionByText(locator, text) {
+        await locator.selectOption({ label: text });
+    }
 
 }
 

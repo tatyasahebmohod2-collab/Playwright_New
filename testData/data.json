@@ -11,9 +11,13 @@
 "email":"tatyasahebmohod2@gmail.com",
 "password":"WelcomeBack",
 "confirmPass":"WelcomeBack"
-
+,"electronicsPageURL":"https://demowebshop.tricentis.com/electronics",
+"cellPhonePageUrl":"https://demowebshop.tricentis.com/cell-phones",
+"country":"United Kingdom"
 
 }
+
+
 
 
 }
