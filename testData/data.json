@@ -17,7 +17,9 @@
 "city":"London",
 "address1":"123, Baker Street",
 "zip":"123456",
-    "mobileNumber":"8600464389"
+    "mobileNumber":"8600464389",
+    "cardHolderName":"Tatyasaheb Mohod",
+    "cardNumber":"1234567890123456"
 
 }
 
