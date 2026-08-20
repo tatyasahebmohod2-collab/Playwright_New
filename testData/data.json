@@ -15,7 +15,8 @@
 "cellPhonePageUrl":"https://demowebshop.tricentis.com/cell-phones",
 "country":"United Kingdom",
 "city":"London",
-"address1":"123, Baker Street"
+"address1":"123, Baker Street",
+"zip":"123456"
 
 }
 
